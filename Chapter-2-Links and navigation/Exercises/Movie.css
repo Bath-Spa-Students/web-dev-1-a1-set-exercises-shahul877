@@ -1,0 +1,107 @@
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center; /* Center-align the content within the header */
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    display: inline-block; /* Display the list horizontally */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-style: italic;
+    color: #666;
+}
+
+/* Cast and Characters list styling */
+ul {
+    list-style: none;
+}
+
+.character-link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.character-info {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.character-info h3 {
+    color: #007bff;
+}
+
+.character-description {
+    color: #333;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: block; /* Change to block display for mobile */
+        text-align: center; /* Center-align the list items */
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .character-info {
+        padding: 10px;
+    }
+}

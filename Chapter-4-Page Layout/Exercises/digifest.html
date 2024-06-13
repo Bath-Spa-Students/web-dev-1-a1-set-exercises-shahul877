@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi Fest</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* New Function: Smooth scrolling */
+        }
+
+        header {
+            background-color: #17072b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            to {
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        nav {
+            background-color: #172d67;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: #17072b;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #ffd700;
+        }
+
+        article {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+  
+        article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffd700, #b03d07);
+            z-index: -1;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        article:hover::before {
+            transform: scaleX(1);
+        }
+
+        article h3 {
+            color: #0c0202;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 10px;
+            
+        }
+
+        article p {
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #8c15e9;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
+
+            article h3 {
+                font-size: 20px;
+            }
+
+            article p {
+                font-size: 14px;
+            }
+        }
+
+        /* Advanced Keyframes Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Additional Animation for Images */
+        img {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Additional Styling for Footer */
+        footer p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            margin: 10px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            margin: 10px;
+        }
+
+        /* New Functions */
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom cursor */
+        .gallery-item:hover {
+            cursor: pointer;
+        }
+
+        /* CSS Variables with Fallback */
+        :root {
+            --primary-color: #17072b;
+            --secondary-color: #ffd700;
+        }
+
+        header {
+            background-color: var(--primary-color);
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+        }
+
+        /* Blend Modes */
+        section {
+            mix-blend-mode: multiply;
+        }
+
+        /* Flexbox Alignment */
+        .gallery-container {
+            align-items: center;
+        }
+
+        /* CSS Grid Item Placement */
+        .gallery-item {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Scroll Snap Type */
+        .gallery-container {
+            scroll-snap-type: y mandatory;
+        }
+
+        /* Backdrop Filter */
+        header {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="digifest-2024-logo-dark.webp" alt="Digi Fest Logo" style="height: 80px;">
+            <h1>Digi Fest</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>
+                Each year, Cardiff plays host to an exceptional gathering known as Digi Fest, widely regarded as the epitome of digital revelries. This dynamic event attracts a diverse array of professionals, enthusiasts, and pioneering visionaries, coming together to exchange ideas and experiences in an atmosphere teeming with energy and inspiration. Digi Fest offers a myriad of captivating activities, ranging from thought-provoking keynote addresses to interactive workshops and invaluable networking opportunities, all meticulously crafted to foster creativity and ignite innovation among attendees. Grounded in an unwavering dedication to nurturing creativity and collaboration, Digi Fest continually pushes the boundaries of what is achievable, propelling the collective journey toward groundbreaking technological advancements and transformative discoveries that will reshape the future landscape of our society.
+            </p>
+        </section>
+
+        <section id="programme">
+            <h2>Line Up</h2>
+            <article>
+                <h3>Gary Vaynerchuk</h3>
+                <img src="Gary_Vaynerchuk-web_103383.jpg" alt="Gary Vaynerchuk" style="max-width: 100%; height: auto; width: 300px; max-height: 300px;">
+                <p>
+                    Gary Vaynerchuk is widely recognized as a leader in entrepreneurship, marketing, and personal growth, celebrated for his dedication to hard work and authenticity. He encourages aspiring entrepreneurs to embrace diligence, perseverance, and the creation of value, utilizing social media and emerging technologies to establish both personal and business brands. Vaynerchuk underscores the significance of narrative and empathy in marketing, advising companies to comprehend their audience and deliver genuine value rather than solely focusing on sales. Additionally, he advocates for self-awareness, continuous education, and the cultivation of positive work environments that prioritize employee welfare and innovation. Vaynerchuk's leadership approach revolves around setting an example and empowering others, reflecting his core principles of diligence, authenticity, and value provision across all aspects of professional and personal development.
+                </p>
+            </article>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2024-05-08 at 13.13.30_e74d332f.jpg" alt="Image 1" style="width: 300px; height: 200px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2024-05-08 at 13.13.32_1a508f13.jpg" alt="Image 2" style="width: 300px; height: 200px;">
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2024-05-08 at 13.13.32_6ec124ee.jpg" alt="Image 3" style="width: 300px; height: 200px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2024-05-08 at 13.13.34_1d1367e7.jpg" alt="Image 4" style="width: 300px; height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Digi Fest. All rights reserved.</p>
+    </footer>
+</body>
+</html>
