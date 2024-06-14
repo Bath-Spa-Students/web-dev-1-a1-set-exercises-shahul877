@@ -1,0 +1,60 @@
+/* Basic reset */
+body, h1, h2, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+img {
+    height: 800px;
+    width: auto;
+    position: relative;
+    bottom: -10px;
+  }
+
+
+  
+/* Style for the main heading */
+h1 {
+    color: #5d4037;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for paragraphs */
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for secondary headings */
+h2 {
+    color: #795548;
+    margin-bottom: 10px;
+}
+
+/* Style for the ingredients list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for the method list */
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+/* Style for list items */
+li {
+    margin-bottom: 10px;
+}
