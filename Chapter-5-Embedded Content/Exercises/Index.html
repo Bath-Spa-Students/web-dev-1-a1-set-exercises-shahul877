@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim Carrey Soundboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jim Carrey Soundboard </h1>
+        <div class="Jim Carrey soundboard">
+            <!-- Buttons for each audio clip -->
+            <button onclick="playSound('audio1')">Clip 1 AHH</button>
+            <button onclick="playSound('audio2')">Clip 2 EXCUSE ME</button>
+            <button onclick="playSound('audio3')">Clip 3 I HAD A DREAM </button>
+            <button onclick="playSound('audio4')">Clip 4 I NEED TO USE</button>
+            <button onclick="playSound('audio5')">Clip 5 MAN IM TIRED </button>
+            <button onclick="playSound('audio6')">Clip 6 NO 2</button>
+            <button onclick="playSound('audio7')">Clip 7 THANK YOU FOR ALL</button>
+            <button onclick="playSound('audio8')">Clip 8 YEAH </button>
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="audio1">
+        <source src="Audio Sampler/Audio/AHH AHH PT1 - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio2">
+        <source src="Audio Sampler/Audio/EXCUSE ME PT2 - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio3">
+        <source src="Audio Sampler/Audio/I HAD A DREAM I BEING FOLLOWED BY A DOG - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio4">
+        <source src="Audio Sampler/Audio/I NEED TO USE THE BATHROOM PT3 - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio5">
+        <source src="Audio Sampler/Audio/MAN I'M TIRED OF BEING RIGHT - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio6">
+        <source src="Audio Sampler/Audio/NO 2 - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio7">
+        <source src="Audio Sampler/Audio/THANK YOU FOR ALL YOUR COPERATION PT3 - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio8">
+        <source src="Audio Sampler/Audio/YEAH - AUDIO FROM JAYUZUMI.COM.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playSound(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
